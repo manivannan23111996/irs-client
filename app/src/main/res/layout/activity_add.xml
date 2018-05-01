@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".AddActivity"
+    android:id="@+id/ScrollView01"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:scrollbars="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp">
+
+        <EditText
+            android:id="@+id/problem_name"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:gravity="top"
+            android:textColorHint="#898989"
+            android:layout_marginTop="16dp"
+            android:layout_width="fill_parent">
+        </EditText>
+
+        <Spinner
+            android:id="@+id/spinner_category"
+            android:layout_height="wrap_content"
+            android:prompt="@string/feedbacktype"
+            android:layout_width="fill_parent"
+            android:layout_marginTop="20dp"
+            android:padding="5dp"
+            android:entries="@array/feedbacktypelist">
+        </Spinner>
+
+        <EditText
+            android:id="@+id/problem_desc"
+            android:layout_height="wrap_content"
+            android:hint="Other Details"
+            android:gravity="top"
+            android:textColorHint="#898989"
+            android:inputType="textMultiLine"
+            android:lines="3"
+            android:layout_marginTop="16dp"
+            android:layout_width="fill_parent">
+        </EditText>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/btn_capture_image"
+                    android:layout_height="50dp"
+                    android:background="@drawable/camera_icon1"
+                    android:textColor="#ffffff"
+                    android:padding="5dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="50dp"/>
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:padding="3dp"
+                    android:src="@drawable/pre_no_available"
+                    android:background="@drawable/image_bg"
+                    android:id="@+id/image_preview"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/gps_accuracy"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:textColorHint="#898989"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content">
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+                    <Button
+                        android:id="@+id/btn_send_report"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="50dp"
+                        android:text="Submit"
+                        android:background="@drawable/btn_bg"
+                        android:textColor="#ffffff"
+                        android:padding="3dp"
+                        android:layout_margin="5dp"
+                        android:layout_width="wrap_content">
+                    </Button>
+
+                    <Button
+                        android:id="@+id/btn_report_cancel"
+                        android:layout_height="wrap_content"
+                        android:text="Cancel"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/btn_bg_cancel"
+                        android:textColor="#ffffff"
+                        android:padding="3dp"
+                        android:layout_width="wrap_content">
+                    </Button>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
